@@ -35,8 +35,6 @@ while True:
             tilt = accel_x / 7 * 100
         else:
             tilt = -100
-    
-    print(f"Tilt: {tilt}")
 
     tilt = round(tilt)
     
@@ -44,7 +42,6 @@ while True:
     
     accel_y = mpu.acceleration[1]
     if -(accel_y) > 15:
-        print("jumped!")
         nx.press_buttons(controller_index, [nxbt.Buttons.Y], down=1.0)
 
 # nx.remove_controller(controller_index)
